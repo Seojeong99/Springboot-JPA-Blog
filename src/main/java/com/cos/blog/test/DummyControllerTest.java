@@ -83,7 +83,7 @@ public class DummyControllerTest {
 			@Override
 			public IllegalArgumentException get() {
 				// TODO Auto-generated method stub
-				return new IllegalArgumentException("해당 유저가 없습니다"+id);
+				return new IllegalArgumentException("해당 유저가 없습니다");
 			}
 		});
 		//요청 : 웹브라우저
