@@ -27,9 +27,14 @@ let index={
 			dataType:"json"//요청을 서버로해서 응답이 왔을때 기본적으로 모든것이 문자열(생긴게 json이라면)=>javascript
 			//회원가입 수행 요청(100초 가정)
 		}).done(function(resp){
+			if(resp.status===500){
+				alert("회원가입이 실패하였습니다");
+			}
+			else{
 			alert("회원가입이 완료되었습니다");
 			//console.log(resp);
-			location.href="/";
+			location.href="/";}
+			
 		}).fail(function(){
 			alert(JSON.stringify(error));
 		});
